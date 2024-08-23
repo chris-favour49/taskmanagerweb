@@ -12,10 +12,10 @@
         </a>
         <a href="index.html" class="logo logo-light">
             <span class="logo-sm">
-                <img src="{{ asset('steex/layouts/assets/images/logo-sm.png')}}" alt="" height="22">
+                <img src="{{ asset('stee/layouts/asets/images/logo-sm.png')}}" alt="" height="22">
             </span>
             <span class="logo-lg">
-                <img src="{{ asset('steex/layouts/assets/images/logo-light.png')}}" alt="" height="22">
+                <img src="{{ asset('ste/layouts/assets/images/logo-light.png')}}" alt="" height="22">
             </span>
         </a>
         <button type="button" class="btn btn-sm p-0 fs-3xl header-item float-end btn-vertical-sm-hover" id="vertical-hover">
@@ -32,7 +32,7 @@
 
                 <li class="menu-title"><span data-key="t-menu">DashBoards</span></li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link collapsed" href="#" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                    <a class="nav-link menu-link collapsed" href="{{route('dashboard')}}" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
                         <i class="ph-gauge"></i> <span data-key="t-dashboards">Dashboards</span>
                     </a>
                 </li>
@@ -61,7 +61,7 @@
                 <li class="menu-title"><span data-key="t-menu">Projects</span></li>
                 <li class="nav-item">
                     <a href="#sidebarEcommerce" class="nav-link menu-link collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEcommerce11">
-                        <i class="ph-storefront"></i> <span data-key="t-ecommerce11">Basic Settings</span>
+                        <i class="ph-storefront"></i> <span data-key="t-ecommerce11">Projects Settings</span>
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarEcommerce">
                         <ul class="nav nav-sm flex-column">

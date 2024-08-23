@@ -7,7 +7,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Fashion_Hub - Admin & Dashboard Template</title>
+    <title>Task Management</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Minimal Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
@@ -113,12 +113,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Analytics</h4>
+                                <h4 class="mb-sm-0">Tasks</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
-                                        <li class="breadcrumb-item active">Analytics</li>
+                                        <li class="breadcrumb-item active">Tasks</li>
                                     </ol>
                                 </div>
 
@@ -313,98 +313,7 @@
                                                     </th>
                                                 </tr>
                                             </thead>
-                                            <tbody class="list">
-                                                <tr>
-                                                    <td>
-                                                        <img src=" {{ asset('steex/layouts/assets/images/brands/chrome.png')}}" alt="" class="avatar-xxs">
-                                                        <span class="ms-1 browsers">Google Chrome</span>
-                                                    </td>
-                                                    <td class="click text-center">
-                                                        640
-                                                    </td>
-                                                    <td class="pageviews text-center">
-                                                        86.01%
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <img src=" {{ asset('steex/layouts/assets/images/brands/firefox.png')}}" alt="" class="avatar-xxs">
-                                                        <span class="ms-1 browsers">Firefox</span>
-                                                    </td>
-                                                    <td class="click text-center">
-                                                        274
-                                                    </td>
-                                                    <td class="pageviews text-center">
-                                                        59.22%
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <img src=" {{ asset('steex/layouts/assets/images/brands/safari.png')}}" alt="" class="avatar-xxs">
-                                                        <span class="ms-1 browsers">Safari</span>
-                                                    </td>
-                                                    <td class="click text-center">
-                                                        591
-                                                    </td>
-                                                    <td class="pageviews text-center">
-                                                        71.36%
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <img src=" {{ asset('steex/layouts/assets/images/brands/opera.png')}}" alt="" class="avatar-xxs">
-                                                        <span class="ms-1 browsers">Opera</span>
-                                                    </td>
-                                                    <td class="click text-center">
-                                                        456
-                                                    </td>
-                                                    <td class="pageviews text-center">
-                                                        63.82%
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <img src=" {{ asset('steex/layouts/assets/images/brands/microsoft.png')}}" alt="" class="avatar-xxs">
-                                                        <span class="ms-1 browsers">Microsoft Edge</span>
-                                                    </td>
-                                                    <td class="click text-center">
-                                                        312
-                                                    </td>
-                                                    <td class="pageviews text-center">
-                                                        57.48%
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <img src=" {{ asset('steex/layouts/assets/images/brands/microsoft2.png')}}" alt="" class="avatar-xxs">
-                                                        <span class="ms-1 browsers">Internet Explorer</span>
-                                                    </td>
-                                                    <td class="click text-center">
-                                                        164
-                                                    </td>
-                                                    <td class="pageviews text-center">
-                                                        77.21%
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <img src=" {{ asset('steex/layouts/assets/images/brands/chromium.png')}}" alt="" class="avatar-xxs">
-                                                        <span class="ms-1 browsers">Chromium</span>
-                                                    </td>
-                                                    <td class="click text-center">
-                                                        36
-                                                    </td>
-                                                    <td class="pageviews text-center">
-                                                        18.90%
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!--end col-->
-                    </div><!--end row-->
+                                      
 
                     <div class="row">
                         <div class="col-xl-9">
@@ -805,13 +714,7 @@
         </div>
     </div>
 
-    <div class="customizer-setting d-none d-md-block">
-        <div class="btn btn-info p-2 text-uppercase rounded-end-0 shadow-lg" data-bs-toggle="offcanvas" data-bs-target="#theme-settings-offcanvas" aria-controls="theme-settings-offcanvas">
-            <i class="bi bi-gear mb-1"></i> Customizer
-        </div>
-    </div>
-
-   @include('inc.footer')
+    @include('inc.footer')
 
     <!-- JAVASCRIPT -->
     <script src=" {{ asset('steex/layouts/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>

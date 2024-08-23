@@ -41,23 +41,17 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title mb-0">All Tasks</h4>
-                    </div><!-- end card header -->
-
-                                    <div class="col-sm">
-                                    <div class="d-flex justify-content-sm-end">
-                                        <div class="search-box ms-2">
-                                            <input type="text" class="form-control search" placeholder="Search...">
-                                            <i class="ri-search-line search-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
                             <div class="table-responsive table-card mt-3 mb-1">
                                 <table class="table align-middle table-nowrap" id="customerTable">
                                             <th class="sort" data-sort="email">SN</th>
                                             <th class="sort" data-sort="customer_name">Task Name</th>
                                             <th class="sort" data-sort="phone">Priority</th>
+                                            <th class="sort" data-sort="phone">View Tasks</th>
                                             <th class="sort" data-sort="status">Date Registerd</th>
                                             <th class="sort" data-sort="action">Action</th>
                                         </tr>
@@ -72,7 +66,8 @@
                                                 <tr>
                                                     <td>{{ $count }}</td>
                                                     <td>{{ $task->taskname }}</td>
-                                                    <td><a href="{{ route('viewtasks',$task->taskid) }}" class="btn btn-primary">View Task</a></td>
+                                                    <td>{{ $task->priority }}</td>
+                                                    <td><a href="{{ route('viewtasks',$task->taskid) }}" class="btn btn-primary">View</a></td>
                                                     <td>{{ $task->datecreated }}</td>
                                                     <td>
                                                         <div class="d-flex gap-2">

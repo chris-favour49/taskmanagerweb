@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Task_Model;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 
 class TaskManagerController extends Controller {
+
+    // The function that captures all the informations on task
+
     public function index() {
         $task = User::leftjoin( 'task_models', 'task_models.user_id', '=', 'users.id' )
         ->get( [ 'users.id as id', 'task_models.taskname as taskname', 'task_models.id as taskid',
@@ -15,6 +17,9 @@ class TaskManagerController extends Controller {
         return view( 'task.taskmanager' )->with( 'tasks', $task );
 
     }
+    // end
+
+    // The function that saves task
 
     public function savetask( Request $request ) {
 
@@ -32,11 +37,17 @@ class TaskManagerController extends Controller {
 
         return back() ->with( 'success', 'You have succefully Created a Task' );
     }
+    // end
+
+    // The function that edits task
 
     public function edittask( $id ) {
         $task  = Task_Model::find( $id );
         return view( 'task.edittask' )->with( 'task', $task );
     }
+    // end
+
+    // The function that updates task
 
     public function updatetask( Request $request ) {
         Task_Model::updateOrCreate( [
@@ -49,12 +60,18 @@ class TaskManagerController extends Controller {
         return redirect()->route( 'tasks' )->with( 'success', 'Data updated successfully' );
 
     }
+    //end
+
+    // The function that deletes task
 
     public function deletetask( $id ) {
         $task  = Task_Model::find( $id )->delete();
         return back() ->with( 'success', 'Data Deleted Successfully' );
 
     }
+    //end
+
+    // The function that captures all  task created
 
     public function alltasks() {
         $task = User::leftjoin( 'task_models', 'task_models.user_id', '=', 'users.id' )
@@ -63,6 +80,9 @@ class TaskManagerController extends Controller {
         return view( 'task.alltasks' )->with( 'tasks', $task );
 
     }
+    // end
+
+    // The function that views task
 
     public function viewtasks( $id ) {
         $task = Task_Model::where( 'task_models.id', $id )
@@ -75,6 +95,6 @@ class TaskManagerController extends Controller {
         ->with( 'id', $id );
 
     }
-
+    //end
 }
 
