@@ -10,8 +10,11 @@ class Task_Model extends Model {
     protected $table = 'task_models';
     protected $fillable = [
         'user_id',
+        'project_id',
         'taskname',
+        'status',
         'priority',
+        'due',
 
     ];
 }

@@ -30,13 +30,6 @@
             </div>
             <ul class="navbar-nav" id="navbar-nav">
 
-                <li class="menu-title"><span data-key="t-menu">DashBoards</span></li>
-                <li class="nav-item">
-                    <a class="nav-link menu-link collapsed" href="{{route('dashboard')}}" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
-                        <i class="ph-gauge"></i> <span data-key="t-dashboards">Dashboards</span>
-                    </a>
-                </li>
-
 
                 <li class="menu-title"><span data-key="t-menu">Task Management</span></li>
                 <li class="nav-item">
@@ -46,50 +39,28 @@
                     <div class="collapse menu-dropdown" id="sidebarLayouts">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="{{route('tasks')}}" target="_blank" class="nav-link" data-key="t-horizontal">Create Task</a>
+                                <a href="{{route('users')}}"  class="nav-link" data-key="t-two-column">Create users</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('alltasks')}}" target="_blank" class="nav-link" data-key="t-two-column">All Task</a>
+                                <a href="{{ route('projects')}}"  class="nav-link" data-key="t-two-column">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('tasks')}}"  class="nav-link" data-key="t-horizontal">Create task</a>
                             </li>
                         </ul>
                     </div>
                 </li>
 
+             </div>
+             </li>
+             </ul>
+            </div>
+           </li>
+          </ul>
+         </div>
+         </li>
 
-
-
-                <li class="menu-title"><span data-key="t-menu">Projects</span></li>
-                <li class="nav-item">
-                    <a href="#sidebarEcommerce" class="nav-link menu-link collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEcommerce11">
-                        <i class="ph-storefront"></i> <span data-key="t-ecommerce11">Projects Settings</span>
-                    </a>
-                    <div class="collapse menu-dropdown" id="sidebarEcommerce">
-                        <ul class="nav nav-sm flex-column">
-
-                            <li class="nav-item">
-                                <a href="#" class="nav-link " data-key="t-products-grid">Create Project</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link" data-key="t-product-Details"> Assign Task</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link" data-key="t-product-Details">View Projects</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </li>
-
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-
-            </ul>
+        </ul>
         </div>
         <!-- Sidebar -->
     </div>

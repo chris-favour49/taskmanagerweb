@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang =eng>
+<title> Task Management</title>
+</html>
 @extends('master')
 @section('content')
 <div class="page-content">
@@ -59,8 +63,12 @@
 
                                             <th class="sort" data-sort="email">SN</th>
                                             <th class="sort" data-sort="customer_name">Task Name</th>
+                                            <th class="sort" data-sort="customer_name">Project</th>
+                                            <th class="sort" data-sort="customer_name">Assignee</th>
                                             <th class="sort" data-sort="phone">Priority</th>
-                                            <th class="sort" data-sort="status">Date Registerd</th>
+                                            <th class="sort" data-sort="phone">Status</th>
+                                            <th class="sort" data-sort="status">Date Created</th>
+                                            <th class="sort" data-sort="customer_name">Due</th>
                                             <th class="sort" data-sort="action">Action</th>
                                         </tr>
                                     </thead>
@@ -74,12 +82,19 @@
                                                 <tr>
                                                     <td>{{ $count }}</td>
                                                     <td>{{ $task->taskname }}</td>
+                                                    <td>{{ $task->project }}</td>
+                                                    <td>{{ $task->assignee }}</td>
                                                     <td>{{ $task->priority }}</td>
+                                                    <td>{{ $task->status }}</td>
                                                     <td>{{ $task->datecreated }}</td>
+                                                    <td>{{ $task->due }}</td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                         <div class="edit">
                                                             <a href="{{route('edittask',$task->taskid)}}" class="btn btn-sm btn-primary edit-item-btn">Edit</a></button>
+                                                        </div>
+                                                        <div class="edit">
+                                                            <a href="{{route('deletetask',$task->taskid)}}" class="btn btn-sm btn-danger edit-item-btn">Delete</a></button>
                                                         </div>
                                                       </td>
                                                     </tr>
@@ -127,10 +142,48 @@
                                 <label for="customername-field" class="form-label">Task Name</label>
                                 <input type="text" id="taskname" name="taskname" class="form-control" placeholder="Enter Task Name" required >
                             </div>
+                            <div class="mb-3">
+                                <label for="customername-field" class="form-label">Project</label>
+                                <select  name="project" class="form-control">
+                                    <option value="">Select a Project</option>
+                                    @foreach ($projects as $project)
+                                    <option value="{{$project->id }}">{{$project->projectname}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername-field" class="form-label">Assignee</label>
+                                <select  name="assignee" class="form-control">
+                                    <option value="">Select an Assignee</option>
+                                    @foreach ($users as $user)
+                                    <option value="{{$user->id }}">{{$user->username}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="customername-field" class="form-label">Due Time</label>
+                                <input type="date" id="due" name="due" class="form-control" placeholder="Enter Task Due" required >
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email-field" class="form-label">Status</label>
+                                <select id="" name="status" class="form-control">
+                                    <option>Please Select Status</option>
+                                    <option>Not Started</option>
+                                    <option>In Progress</option>
+                                    <option>In Complete</option>
+                                    <option>Completed</option>
+                                </select>
+                            </div>
 
                             <div class="mb-3">
                                 <label for="email-field" class="form-label">Priority</label>
-                                <input type="text" id="priority" name="priority" class="form-control" placeholder="Enter Priority" required >
+                                <select id="priority" name="priority" class="form-control">
+                                    <option>Please Select Priority</option>
+                                    <option>Low</option>
+                                    <option>Meduim</option>
+                                    <option>High</option>
+                                </select>
                             </div>
                         <div class="modal-footer">
                             <div class="hstack gap-2 justify-content-end">
